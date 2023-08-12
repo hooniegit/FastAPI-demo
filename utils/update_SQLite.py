@@ -24,7 +24,7 @@ def insert_measurements(data_received:dict, SQLite_DIR:str):
 
     # Flag 파일 생성
     # FLAG_DIR = f"/flask_compose/datas/DONE/{sensor_id}"
-    FLAG_DIR = "/users/kimdohoon/Desktop/TEST"
+    FLAG_DIR = "/home/kjh/code/FastAPI-demo/datas/DONE"
     with open(f"{FLAG_DIR}/{sensor_id}&{date}&{time}&DONE", "w") as file:
         pass
     

@@ -7,5 +7,5 @@ router = APIRouter()
 @router.post('/data-endpoint', response_class=PlainTextResponse)
 async def receive_data(data_received: dict):
     # SQLite_DIR = "/pipeline/datas/SQLite/"
-    SQLite_DIR = "/Users/kimdohoon/git/hooniegit/FastAPI-demo/datas/SQLite/sensors"
+    SQLite_DIR = "/home/kjh/code/FastAPI-demo/datas/SQLite/sensors"
     return insert_measurements(data_received, SQLite_DIR)
