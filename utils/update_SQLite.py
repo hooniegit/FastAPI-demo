@@ -17,13 +17,14 @@ def insert_measurements(data_received:dict, SQLite_DIR:str):
 
     # SQLite 파일 업데이트
     QUERY = f"""
-        INSERT INTO sensor_data (sensor_id, date, time, measurement, rank)
+        INSERT INTO measurement (sensor_id, date, time, measurement, rank)
         VALUES ({sensor_id}, '{date}', '{time}', {measurement}, '{rank}')
         """
     SQLite_UPDATE(SQLite_DIR, QUERY)
 
     # Flag 파일 생성
-    FLAG_DIR = f"/flask_compose/datas/DONE/{sensor_id}"
+    # FLAG_DIR = f"/flask_compose/datas/DONE/{sensor_id}"
+    FLAG_DIR = "/users/kimdohoon/Desktop/TEST"
     with open(f"{FLAG_DIR}/{sensor_id}&{date}&{time}&DONE", "w") as file:
         pass
     
